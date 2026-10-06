@@ -357,11 +357,13 @@ section {
   margin-bottom: 50px;
 }
 
+/* TEAM SECTION */
 .team-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  flex-wrap: wrap; /* makes it responsive */
+  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -369,11 +371,24 @@ section {
 .team-card {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
-  width: 320px;
-  overflow: hidden; /* keeps image inside rounded corners */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 320px; /* Desktop size */
+  overflow: hidden;
   transition: 0.3s;
 }
+
+/* MOBILE: MAKE CARDS FULL WIDTH */
+@media (max-width: 768px) {
+  .team-container {
+    padding: 20px 15px;
+  }
+
+  .team-card {
+    width: 100%; /* This makes it full width */
+    max-width: 100%;
+  }
+}
+
 .team-card:hover {
   transform: translateY(-10px);
 }
