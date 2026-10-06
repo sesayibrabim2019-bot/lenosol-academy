@@ -816,7 +816,7 @@ footer.footer .footer-social a img {
     justify-content: center !important;
     flex-direction: column !important;
     text-align: center !important;
-    padding: 25px 4%  35px 4% !important;
+    padding: 25px 4% 35px 4% !important;
     gap: 10px !important;
     margin-top: 1px !important;
     border-top: 3px solid #00a651 !important;
@@ -921,5 +921,38 @@ footer.footer .footer-social a img {
   }
   .section-title {
     font-size: 28px;
+  }
+}
+/* HAMBURGER 3 DASHES ONLY */
+.site-header .hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.site-header .hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #000; /* change to #fff if your navbar is dark */
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* HIDE ON DESKTOP, SHOW ON PHONE */
+@media (max-width: 768px) {
+  .site-header .hamburger {
+    display: flex;
+  }
+}
+
+/* ON BIG SCREEN HIDE IT */
+@media (min-width: 769px) {
+  .site-header .hamburger {
+    display: none;
   }
 }
