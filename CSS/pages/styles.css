@@ -1005,3 +1005,51 @@ footer.footer .footer-social a img {
     display: none;
   }
 }
+/* FIX HEADER AND FOOTER */
+
+/* 1. Make header sticky but not cover content */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 2. Mobile menu fix - make it drop down properly */
+@media (max-width: 768px) {
+  .site-header .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* puts it right under header */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9998;
+  }
+
+  .site-header .nav-links a {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+/* 3. FIX FOOTER COPYRIGHT CUT OFF */
+.site-footer {
+  padding-bottom: 40px; /* add space at bottom */
+  margin-top: 50px;
+}
+
+.site-footer .copyright {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+}
