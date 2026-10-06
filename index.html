@@ -37,7 +37,7 @@
           /></span>
           <span>LENOSOL<span class="logo-green">ACADEMY</span></span>
         </div>
-        <nav class="nav-links">
+        <nav class="nav-links" id="nav-links">
           <a href="#home">HOME</a>
           <a href="#about">ABOUT</a>
           <a href="#courses">COURSES</a>
@@ -46,12 +46,12 @@
         </nav>
         <div class="nav-icons">
           <span>🔍</span>
-          <div class="hamburger" id="hamburger"> 
+          <div class="hamburger" id="hamburger">
             <span></span>
-          <span></span>
-          <span></span>
+            <span></span>
+            <span></span>
           </div>
-          
+
           <!-- HTML inside .navbar -->
         </div>
       </nav>
@@ -504,6 +504,11 @@
             .scrollIntoView({ behavior: "smooth" });
         });
       });
+    </script>
+    <script>
+      document.getElementById("hamburger").onclick = function () {
+        document.getElementById("nav-links").classList.toggle("active");
+      };
     </script>
   </body>
 </html>
